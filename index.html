@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жазминанын Каалоолору & Сүйүктүү Нерселери 💖</title>
+  <style>
+    /* CSS Стильдер */
+    :root {
+      --primary: #ff6b81;
+      --primary-hover: #ff4757;
+      --bg: #fff5f6;
+      --card-bg: #ffffff;
+      --text: #2f3542;
+      --border: #ffe0e6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+      color: white;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 20px rgba(255, 117, 140, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .notice {
+      background: #ffeaa7;
+      color: #d63031;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 500;
+      border: 1px solid #fdcb6e;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #d63031;
+      margin: 25px 0 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .list-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .item-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(255, 107, 129, 0.15);
+    }
+
+    .item-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .custom-checkbox {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+
+    .item-text {
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
+
+    .badge {
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      background: #ffe6eb;
+      color: var(--primary);
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Аткарылганда тунук тартуу */
+    .completed {
+      background: #f1f2f6;
+      border-color: #dfe4ea;
+    }
+
+    .completed .item-text {
+      text-decoration: line-through;
+      color: #a4b0be;
+    }
+
+    .completed .badge {
+      background: #e4e7eb;
+      color: #2ed573;
+    }
+
+    .ranking-list {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .ranking-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .ranking-item:last-child {
+      border-bottom: none;
+    }
+
+    .rank-number {
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #747d8c;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Сүйүктүүмдүн каалоолору 💕</h1>
+      <p>Сүйүктүүм Жазминаны бактылуу кылуучу кичинекей жана чоң каалоолор тизмеси</p>
+    </header>
+
+    <div class="notice">
+      🔔 **Эстетүү:** Бул тизмени бат-баттан карап, аткарылган каалоолорго "птичка" коюп тур!
+    </div>
+
+    <!-- 1-БӨЛҮМ: ӨНӨКТӨШТӨН КҮТҮЛГӨН КӨҢҮЛ БУРУУЛАР -->
+    <h2 class="section-title">💖 Күнүмдүк көңүл буруу жана мамиле</h2>
+    <div class="list-group">
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Жатаарда жана эрте менен ойгонгондо чекесинен ооп коюу 💋</span>
+        </div>
+        <span class="badge">Күн сайын</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Дайыма колунан кармап жүрүү (телефондо сүйлөшүп жатса да кучактап туруу) 🤝</span>
+        </div>
+        <span class="badge">Дайыма</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Бир жерге барганда дайыма анын жанында болуу 💑</span>
+        </div>
+        <span class="badge">Дайыма</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Машинада баратканда ар бир деталга көңүл буруп, сүйүү музыкаларын коюп, көзүнө суктануу менен кароо ✨</span>
+        </div>
+        <span class="badge">Романтика</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Машинада колунан, сандарынан кармап, кээде колун өөп коюу 🚗❤️</span>
+        </div>
+        <span class="badge">Автодо</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Магазинге токтоп, күтүүсүздөн 1 штук болсо да гүл алып келип берүү 🌹</span>
+        </div>
+        <span class="badge">Сюрприз</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Магазинге кирип суу, таттуулар жана жвачка алып чыгып, 100% көңүл буруу 🍬</span>
+        </div>
+        <span class="badge">Камкордук</span>
+      </label>
+    </div>
+
+    <!-- 2-БӨЛҮМ: СЕЙИЛДӨӨ ЖАНА ПЛАНДАР -->
+    <h2 class="section-title">🌧️ Сейилдөө жана Идеялар</h2>
+    <div class="list-group">
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Жамгырда чогуу сейилдөө, жамгырда бийлөө 🌧️💃</span>
+        </div>
+        <span class="badge">Жамгыр</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Жамгырда машина менен кичине болсо да айланып жүрүп келүү 🚘</span>
+        </div>
+        <span class="badge">Авто</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Үйдө жылуу оронуп, попкорн, чипсы, сүт кофе коюп алып чогуу кино көрүү 🍿☕🎬</span>
+        </div>
+        <span class="badge">Үйдө уют</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">1 сет Суши Комбо алып, тоого / жайлоого (Паапан, Данги ж.б.) машина менен барып жеп келүү 🏔️🍣</span>
+        </div>
+        <span class="badge">Тоого пикник</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Атка барып сүрөткө түшүү жана чогуу ат минип сейилдөө 🐎📸</span>
+        </div>
+        <span class="badge">Активдүү</span>
+      </label>
+
+      <label class="item-card">
+        <div class="item-content">
+          <input type="checkbox" class="custom-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Жаны ачылган кофейня / ресторандарга баруу, жаңы менюдан даам татуу ✨☕</span>
+        </div>
+        <span class="badge">Жаңы жерлер</span>
+      </label>
+    </div>
+
+    <!-- 3-БӨЛҮМ: ОШТОГУ СҮЙҮКТҮҮ РЕСТОРАНДАР -->
+    <h2 class="section-title">🍽️ Оштогу Сүйүктүү Ресторандар (Топ-7)</h2>
+    <div class="ranking-list">
+      <div class="ranking-item"><div class="rank-number">1</div> <strong>Vento</strong></div>
+      <div class="ranking-item"><div class="rank-number">2</div> <strong>Дольче Вита (Dolce Vita)</strong></div>
+      <div class="ranking-item"><div class="rank-number">3</div> <strong>Зире</strong></div>
+      <div class="ranking-item"><div class="rank-number">4</div> <strong>Деңиз</strong></div>
+      <div class="ranking-item"><div class="rank-number">5</div> <strong>Чыгдан</strong></div>
+      <div class="ranking-item"><div class="rank-number">6</div> <strong>Улук Ата</strong></div>
+      <div class="ranking-item"><div class="rank-number">7</div> <strong>Суши Тайм</strong></div>
+    </div>
+
+    <!-- 4-БӨЛҮМ: СҮЙҮКТҮҮ ТАМАК-АШ ТИЗМЕСИ -->
+    <h2 class="section-title">🍕 Сүйүктүү Тамак-Аш, Суусундук жана Десерттер</h2>
+    <div class="list-group">
+      <div class="item-card">
+        <span>🍣 <strong>Тамактар:</strong> Запеченный суши, Сингапурский лапша, Фетучини паста, Рамен.</span>
+      </div>
+      <div class="item-card">
+        <span>🥤 <strong>Суусундуктар:</strong> Сүт кофе, Океан Клубничный Лимонады.</span>
+      </div>
+      <div class="item-card">
+        <span>🍰 <strong>Десерттер:</strong> Сан Себастьян, Арт десерты Сникерс, бардык таттуу шириндиктер.</span>
+      </div>
+    </div>
+
+    <!-- 5-БӨЛҮМ: СҮЙҮКТҮҮ ГҮЛДӨР -->
+    <h2 class="section-title">💐 Сүйүктүү Гүлдөр</h2>
+    <div class="list-group">
+      <div class="item-card">
+        <span>🌸 <strong>Негизги сүйүктүү гүл:</strong> Пиондор жана Ак Ромашкалар</span>
+      </div>
+      <div class="item-card">
+        <span>🌿 <strong>Апрель айында:</strong> Сирень гүлүн каалайт</span>
+      </div>
+      <div class="item-card">
+        <span>🌷 <strong>Май айында:</strong> Тюльпан гүлдөрүн каалайт</span>
+      </div>
+    </div>
+
+    <footer>
+      <p>Жазмина үчүн атайын сүйүү менен жасалды ❤️ | 2026</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Птичка койгондо картанын түсүн өзгөртүүчү жөнөкөй функция
+    function toggleItem(checkbox) {
+      const card = checkbox.closest('.item-card');
+      if (checkbox.checked) {
+        card.classList.add('completed');
+      } else {
+        card.classList.remove('completed');
+      }
+    }
+  </script>
+
+</body>
+</html>
